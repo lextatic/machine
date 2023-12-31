@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\7 Taskbar Tweaker\OptionsEx]
+"no_width_limit"=dword:00000001
+[HKEY_CURRENT_USER\Software\7 Taskbar Tweaker]
+"last_taskbar_width"=dword:00000020

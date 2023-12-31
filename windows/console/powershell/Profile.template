@@ -1,0 +1,100 @@
+$Global:SourceLocation = "C:/Projects"
+$Global:ProfaneClientLocation = "C:/Projects/insane/profane-game-client"
+$Global:ProfaneServerLocation = "C:/Projects/insane/profane-game-server"
+
+# Start the stopwatch
+$Stopwatch = [system.diagnostics.stopwatch]::StartNew()
+
+# Set the output encoding
+[console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+
+# Load the profile
+. "<<PROFILE>>"
+
+# Load PSReadLine
+$Global:PSReadLineInstalled = (Get-Module -ListAvailable -Name PSReadLine)
+if ($Global:PSReadLineInstalled)
+{
+	Write-Host "Initializing PSReadLine... " -NoNewline
+	Import-Module PSReadLine
+	Set-PSReadLineOption -PredictionSource History
+	Set-PSReadLineOption -PredictionViewStyle ListView
+	Set-PSReadLineOption -EditMode Windows
+	Set-PSReadLineOption -Colors @{ InlinePrediction = "$([char]0x1b)[36;7;238m"}
+
+	# Change up and down to now base on what have typed in your history!
+	Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+	Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+
+	Write-Host "Done!" -ForegroundColor Green
+}
+else
+{
+	Write-Host "The PSReadLine module has not been installed." -ForegroundColor Red
+}
+
+# Load Posh-git
+$Global:PoshGitInstalled = (Get-Module -ListAvailable -Name posh-git)
+if ($Global:PoshGitInstalled)
+{
+	Write-Host "Initializing posh-git... " -NoNewline
+	Import-Module posh-git
+	$env:POSH_GIT_ENABLED = $true
+	Write-Host "Done!" -ForegroundColor Green
+}
+else
+{
+	Write-Host "The posh-git module has not been installed." -ForegroundColor Red
+}
+
+# Load Terminal-icons
+$Global:TerminalIconsInstalled = (Get-Module -ListAvailable -Name Terminal-Icons)
+if ($Global:TerminalIconsInstalled)
+{
+	Write-Host "Initializing terminal-icons... " -NoNewline
+	Import-Module -Name Terminal-Icons
+	Write-Host "Done!" -ForegroundColor Green
+}
+else
+{
+	Write-Host "The Terminal-Icons module has not been installed." -ForegroundColor Red
+}
+
+$Global:LOCALPROFILE = "<<LOCALPROFILE>>"
+if (Test-Path $Global:LOCALPROFILE)
+{
+	Write-Host "Initializing local profile... " -NoNewline
+	. $Global:LOCALPROFILE
+	Write-Host "Done!" -ForegroundColor Green
+}
+
+$UpdateCheckedPath = "$($env:LOCALAPPDATA)\update-checked.txt"
+$Timespan = new-timespan -days 7
+if (((Test-Path $UpdateCheckedPath) -eq $false) -or ((get-date) - (Get-Item $UpdateCheckedPath).LastWriteTime -gt $Timespan))
+{
+	Write-Host
+	Write-Host "Been 7 days since running global update checks. Doing that now."
+
+	# Restore the following in case I ever install Nodejs.
+	#Write-Host
+	#Write-Host "Running npm -g outdated"
+	#npm -g outdated
+
+	Write-Host
+	Write-Host "Running choco outdated"
+	choco outdated
+
+	Write-Host 
+	Write-Host "Running dotnet-tools-outdated"
+	dotnet tool install -g dotnet-tools-outdated
+	dotnet-tools-outdated
+
+	get-date | Out-File -FilePath $UpdateCheckedPath
+}
+
+. "<<PROMPT>>"
+
+# Output some stats
+Write-Host "Profile loaded in " -NoNewline
+Write-Host $Stopwatch.Elapsed.TotalMilliseconds -NoNewline -ForegroundColor Blue
+Write-Host " ms"
