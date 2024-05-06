@@ -7,6 +7,8 @@ Param(
 	[Parameter(ParameterSetName='software')]
 	[switch]$Apps,
 	[Parameter(ParameterSetName='software')]
+	[switch]$Customization,
+	[Parameter(ParameterSetName='software')]
 	[switch]$VSExtensions
 )
 
@@ -53,5 +55,11 @@ if ($VSExtensions.IsPresent)
 if ($Ubuntu.IsPresent)
 {
 	Install-BoxstarterPackage ./setup/ubuntu.ps1 -DisableReboots
+	RefreshEnv
+}
+
+if ($Customization.IsPresent)
+{
+	Install-BoxstarterPackage ./setup/customization.ps1 -DisableReboots
 	RefreshEnv
 }

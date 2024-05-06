@@ -27,5 +27,5 @@ do that, and run the script again after reboot.
 # 3. Install applications and/or Ubuntu
 
 ```
-> ./install.ps1 -Apps -VSExtensions -Ubuntu
+> ./install.ps1 -Apps -VSExtensions -Ubuntu -Customization
 ```

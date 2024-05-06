@@ -35,6 +35,10 @@ Start-Process regedit.exe -ArgumentList "/s $regFilePath" -Wait
 $regFilePath = "config/7+TaskbarTweaker.reg"
 Start-Process regedit.exe -ArgumentList "/s $regFilePath" -Wait
 
+# Load other windows customizations
+$regFilePath = "config/WindowsCustomizations.reg"
+Start-Process regedit.exe -ArgumentList "/s $regFilePath" -Wait
+
 # Force Explorer to restart
 Stop-Process -Name explorer -Force
 

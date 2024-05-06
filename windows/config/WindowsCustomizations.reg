@@ -1,0 +1,55 @@
+Windows Registry Editor Version 5.00
+
+; Disable Windows Settings Sync
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\SettingSync]
+"DisableCredentialsSettingSync"=dword:00000002
+"DisableCredentialsSettingSyncUserOverride"=dword:00000001
+"DisableWindowsSettingSync"=dword:00000002
+"DisableWindowsSettingSyncUserOverride"=dword:00000001
+
+; Mouse sensitivity settings
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"MouseSpeed"=dword:00000000
+"MouseSensitivity"=dword:00000010
+
+; Set short date format to "dd/MM"
+[HKEY_CURRENT_USER\Control Panel\International]
+"sShortDate"="dd/MM"
+"sShortTime"="HH:mm"
+"sTimeFormat"="HH:mm:ss"
+
+; Disable Alt+Shift and Ctrl+Shift keyboard layout/language shortcuts
+[HKEY_CURRENT_USER\Keyboard Layout\Toggle]
+"Hotkey"="3"
+"Language Hotkey"="3"
+"Layout Hotkey"="3"
+
+[HKEY_USERS\.DEFAULT\Keyboard Layout\Toggle]
+"Hotkey"="3"
+"Language Hotkey"="3"
+"Layout Hotkey"="3"
+
+; Clear all existing values under "Preload"
+[-HKEY_CURRENT_USER\Keyboard Layout\Preload]
+; Add my keyboard layouts
+[HKEY_CURRENT_USER\Keyboard Layout\Preload]
+"1"="00000409" ; English (United States)
+"2"="00000416" ; Portuguese (Brazil)
+
+[-HKEY_USERS\.DEFAULT\Keyboard Layout\Preload]
+[HKEY_USERS\.DEFAULT\Keyboard Layout\Preload]
+"1"="00000409" ; English (United States)
+"2"="00000416" ; Portuguese (Brazil)
+
+; Clear all existing values under "Substitutes"
+[-HKEY_CURRENT_USER\Keyboard Layout\Substitutes]
+; Add Substitutes as United States-International
+[HKEY_CURRENT_USER\Keyboard Layout\Substitutes]
+"00000409"="00020409" ; English (United States) > United States-International
+"00000416"="00020409" ; Portuguese (Brazil) > United States-International
+
+[-HKEY_USERS\.DEFAULT\Keyboard Layout\Substitutes]
+[HKEY_USERS\.DEFAULT\Keyboard Layout\Substitutes]
+"00000409"="00020409" ; English (United States) > United States-International
+"00000416"="00020409" ; Portuguese (Brazil) > United States-International
+
