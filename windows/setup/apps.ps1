@@ -37,7 +37,7 @@ choco upgrade --cache="$ChocoCachePath" --yes geforce-experience
 choco upgrade --cache="$ChocoCachePath" --yes crystaldiskinfo
 choco upgrade --cache="$ChocoCachePath" --yes defraggler
 choco upgrade --cache="$ChocoCachePath" --yes openhardwaremonitor
-choco upgrade --cache="$ChocoCachePath" --yes windirstat
+choco upgrade --cache="$ChocoCachePath" --yes wiztree
 
 # Media
 choco upgrade --cache="$ChocoCachePath" --yes mpc-hc
@@ -55,6 +55,7 @@ choco upgrade --cache="$ChocoCachePath" --yes shotcut
 
 # Gaming
 choco upgrade --cache="$ChocoCachePath" --yes steam
+choco upgrade --cache="$ChocoCachePath" --yes ps-remote-play
 #choco upgrade --cache="$ChocoCachePath" --yes epicgameslauncher
 
 # Comms
@@ -71,7 +72,7 @@ choco upgrade --cache="$ChocoCachePath" --yes notepadplusplus
 choco upgrade --cache="$ChocoCachePath" --yes poshgit
 choco upgrade --cache="$ChocoCachePath" --yes powershell-core
 choco upgrade --cache="$ChocoCachePath" --yes unity-hub
-#choco upgrade --cache="$ChocoCachePath" --yes visualstudio2022professional --package-parameters "--add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.ManagedGame --includeRecommended --norestart --passive --locale en-US"
+#choco upgrade --cache="$ChocoCachePath" --yes visualstudio2022community --package-parameters "--add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.ManagedGame --includeRecommended --norestart --passive --locale en-US"
 
 # INSANE work tools
 choco upgrade --cache="$ChocoCachePath" --yes cloudberryexplorer.amazons3
