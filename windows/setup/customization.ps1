@@ -28,15 +28,15 @@ choco upgrade --cache="$ChocoCachePath" --yes 7tt
 ##########################################################################
 
 # ExplorerPatcher configs
-$regFilePath = "config/ExplorerPatcher.reg"
+$regFilePath = "configs/ExplorerPatcher.reg"
 Start-Process regedit.exe -ArgumentList "/s $regFilePath" -Wait
 
 # 7+ Taskbar Tweaker configs
-$regFilePath = "config/7+TaskbarTweaker.reg"
+$regFilePath = "configs/7+TaskbarTweaker.reg"
 Start-Process regedit.exe -ArgumentList "/s $regFilePath" -Wait
 
 # Load other windows customizations
-$regFilePath = "config/WindowsCustomizations.reg"
+$regFilePath = "configs/WindowsCustomizations.reg"
 Start-Process regedit.exe -ArgumentList "/s $regFilePath" -Wait
 
 # Force Explorer to restart

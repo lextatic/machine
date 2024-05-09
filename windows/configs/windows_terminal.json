@@ -6,6 +6,20 @@
         {
             "command": 
             {
+                "action": "newTab"
+            },
+            "keys": "ctrl+t"
+        },
+        {
+            "command": 
+            {
+                "action": "commandPalette"
+            },
+            "keys": "ctrl+shift+p"
+        },
+        {
+            "command": 
+            {
                 "action": "moveFocus",
                 "direction": "down"
             },
@@ -22,23 +36,17 @@
         {
             "command": 
             {
+                "action": "splitPane",
+                "split": "down"
+            },
+            "keys": "ctrl+shift+minus"
+        },
+        {
+            "command": 
+            {
                 "action": "copy"
             },
             "keys": "ctrl+c"
-        },
-        {
-            "command": 
-            {
-                "action": "commandPalette"
-            },
-            "keys": "ctrl+shift+p"
-        },
-        {
-            "command": 
-            {
-                "action": "newTab"
-            },
-            "keys": "ctrl+t"
         },
         {
             "command": 
@@ -55,10 +63,9 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "down"
+                "action": "closeTab"
             },
-            "keys": "ctrl+shift+minus"
+            "keys": "ctrl+w"
         },
         {
             "command": 
@@ -71,21 +78,14 @@
         {
             "command": 
             {
-                "action": "closeTab"
-            },
-            "keys": "ctrl+w"
-        },
-        {
-            "command": "closePane",
-            "keys": "ctrl+shift+d"
-        },
-        {
-            "command": 
-            {
                 "action": "resizePane",
                 "direction": "right"
             },
             "keys": "ctrl+shift+right"
+        },
+        {
+            "command": "closePane",
+            "keys": "ctrl+shift+d"
         },
         {
             "command": 
@@ -135,6 +135,7 @@
         "defaults": 
         {
             "antialiasingMode": "cleartype",
+            "backgroundImage": null,
             "bellStyle": 
             [
                 "audible",
@@ -168,15 +169,15 @@
                 "name": "PowerShell Core",
                 "source": "Windows.Terminal.PowershellCore"
             },
-			{
-                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe -li",
-                "guid": "{d15b228a-05d7-50d1-8472-f60aaba86efc}",
-                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
-                "name": "Git Bash",
-				"backgroundImage": "%WINDOWSTERMINAL_IMAGES%/git.png",
+            {
+                "backgroundImage": "%WINDOWSTERMINAL_IMAGES%/git.png",
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageOpacity": 0.25,
                 "backgroundImageStretchMode": "none",
+                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe -li",
+                "guid": "{d15b228a-05d7-50d1-8472-f60aaba86efc}",
+                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
@@ -202,14 +203,14 @@
                 "name": "Ubuntu",
                 "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
             },
-			{
+            {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "experimental.pixelShaderPath": "%WINDOWSTERMINAL_SHADERS%/crt.hlsl",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
             },
-			{
+            {
                 "background": "#222632",
                 "backgroundImage": "%WINDOWSTERMINAL_IMAGES%/powershell.png",
                 "backgroundImageAlignment": "bottomRight",
@@ -220,7 +221,11 @@
                 "name": "Windows PowerShell"
             },
             {
-                "colorScheme": "Campbell",
+                "background": "#222632",
+                "backgroundImage": "%WINDOWSTERMINAL_IMAGES%/visualstudio.png",
+                "backgroundImageAlignment": "bottomRight",
+                "backgroundImageOpacity": 0.25,
+                "backgroundImageStretchMode": "none",
                 "commandline": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Platform\\Debugger\\VsDebugConsole.exe\"",
                 "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
                 "hidden": true,
@@ -244,8 +249,8 @@
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-				"commandline": "\"C:\\Program Files\\Git\\usr\\bin\\bash.exe\"",
-				"experimental.pixelShaderPath": "%WINDOWSTERMINAL_SHADERS%/dawn.hlsl",
+                "commandline": "\"C:\\Program Files\\Git\\usr\\bin\\bash.exe\"",
+                "experimental.pixelShaderPath": "%WINDOWSTERMINAL_SHADERS%/dawn.hlsl",
                 "guid": "{4fad5bfb-096a-4579-91e3-ff7aba5e291f}",
                 "hidden": true,
                 "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",

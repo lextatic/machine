@@ -69,7 +69,7 @@ if($All.IsPresent -or $WindowsTerminalProfile.IsPresent)
 	Assert-WindowsTerminalInstalled;
 
 	# Create symlink to Windows Terminal settings
-	$TerminalProfileSource = Join-Path $PWD "../config/windows_terminal.json"
+	$TerminalProfileSource = Join-Path $PWD "../configs/windows_terminal.json"
 	$TerminalPath = Get-WindowsStoreAppPath -App "Microsoft.WindowsTerminal_8wekyb3d8bbwe";
 	$TerminalProfileDestination = Join-Path $TerminalPath "LocalState/settings.json";
 	if(Test-Path $TerminalProfileDestination)
