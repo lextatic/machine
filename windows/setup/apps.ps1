@@ -63,6 +63,7 @@ choco upgrade --cache="$ChocoCachePath" --yes discord
 
 # GameDev tools
 choco upgrade --cache="$ChocoCachePath" --yes dotpeek --pre
+choco upgrade --cache="$ChocoCachePath" --yes gh # GitHub CLI
 choco upgrade --cache="$ChocoCachePath" --yes git
 #choco upgrade --cache="$ChocoCachePath" --yes git-fork #currently broken
 choco upgrade --cache="$ChocoCachePath" --yes grepwin
