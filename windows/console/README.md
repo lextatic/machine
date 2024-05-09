@@ -6,6 +6,12 @@ Don't run this before cloning the machine repository properly.
 
 * [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701) (Installed from Windows Store)
 
+* Launch PowerShell as administrator and run the following command.
+
+```
+> Set-ExecutionPolicy Unrestricted
+```
+
 ## Installation
 
 To install, run the following script from an administrator PowerShell prompt:
