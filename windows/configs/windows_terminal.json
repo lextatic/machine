@@ -174,8 +174,10 @@
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageOpacity": 0.25,
                 "backgroundImageStretchMode": "none",
+                "colorScheme": "Solarized Dark",
                 "commandline": "C:\\Program Files\\Git\\bin\\bash.exe -li",
                 "guid": "{d15b228a-05d7-50d1-8472-f60aaba86efc}",
+                "hidden": false,
                 "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
                 "name": "Git Bash"
             },
@@ -211,17 +213,17 @@
                 "name": "Command Prompt"
             },
             {
-                "background": "#222632",
                 "backgroundImage": "%WINDOWSTERMINAL_IMAGES%/powershell.png",
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageOpacity": 0.25,
                 "backgroundImageStretchMode": "none",
+				"colorScheme": "Solarized Dark",
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
-                "background": "#222632",
                 "backgroundImage": "%WINDOWSTERMINAL_IMAGES%/visualstudio.png",
                 "backgroundImageAlignment": "bottomRight",
                 "backgroundImageOpacity": 0.25,
@@ -233,7 +235,10 @@
                 "source": "VSDebugConsole"
             },
             {
-                "colorScheme": "Solarized Dark",
+                "backgroundImage": "%WINDOWSTERMINAL_IMAGES%/visualstudio.png",
+                "backgroundImageAlignment": "bottomRight",
+                "backgroundImageOpacity": 0.25,
+                "backgroundImageStretchMode": "none",
                 "commandline": "\"C:\\Windows\\system32\\cmd.exe\" /k \"\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat\"\"",
                 "guid": "{3ad986c8-afc2-5b25-8fd5-f69e05a92688}",
                 "hidden": true,
@@ -249,12 +254,56 @@
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
+                "backgroundImage": "%WINDOWSTERMINAL_IMAGES%/git.png",
+                "backgroundImageAlignment": "bottomRight",
+                "backgroundImageOpacity": 0.25,
+                "backgroundImageStretchMode": "none",
+                "colorScheme": "Solarized Dark",
                 "commandline": "\"C:\\Program Files\\Git\\usr\\bin\\bash.exe\"",
-                "experimental.pixelShaderPath": "%WINDOWSTERMINAL_SHADERS%/dawn.hlsl",
                 "guid": "{4fad5bfb-096a-4579-91e3-ff7aba5e291f}",
                 "hidden": true,
                 "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
                 "name": "Git Bash Context Menu"
+            },
+            {
+                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
+                "experimental.pixelShaderPath": "%WINDOWSTERMINAL_SHADERS%/Dawn.hlsl",
+                "guid": "{8a121312-7514-4b55-bc83-a7e13b6aa1db}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
+                "name": "Dawn"
+            },
+            {
+                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
+                "experimental.pixelShaderPath": "%WINDOWSTERMINAL_SHADERS%/neonroad.hlsl",
+                "guid": "{e0f523fb-fa95-4cd3-9dbb-fd615c0bb96c}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
+                "name": "Neon Road"
+            },
+            {
+                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
+                "experimental.pixelShaderPath": "%WINDOWSTERMINAL_SHADERS%/onnet.hlsl",
+                "guid": "{a27ff41c-0b12-4e85-8100-c6b364c63b7d}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
+                "name": "On Net"
+            },
+            {
+                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
+                "experimental.pixelShaderPath": "%WINDOWSTERMINAL_SHADERS%/reactor.hlsl",
+                "guid": "{04813a03-f739-424d-87e7-8c676e0b4a7d}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
+                "name": "Reactor"
+            },
+            {
+                "commandline": "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\"",
+                "experimental.pixelShaderPath": "%WINDOWSTERMINAL_SHADERS%/twist.hlsl",
+                "guid": "{d9cf02af-9d4a-4803-ab67-3c614a07a3f6}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
+                "name": "Twist"
             }
         ]
     },
